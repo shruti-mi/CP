@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+#define f first
+#define s second
+#define pb push_back
+#define ll long long 
+#define mp make_pair
+#define all(x) x.begin(),x.end()
+#define rall(x) x.rbegin(),x.rend()
+
+#define sync ios_base::sync_with_stdio(false),cin.tie(nullptr);
+
+#define foru(i,n) for(int i = 0 ; i < n ; ++ i )
+#define ford(i,n) for(int i = n-1 ; i >= 0 ; -- i )
+#define rep(i,a,b) for(int i = a ; i <= b ; ++ i )
+#define PI 3.14159265
+#define M 1000000007
+#define MX INT_MAX
+#define MN INT_MIN
+
+typedef pair<ll, ll> pii;
+typedef vector<ll> vi;
+typedef vector<pii> vpi;
+typedef vector<vi> vvi;
+
+int main() {
+  sync ;
+
+}
