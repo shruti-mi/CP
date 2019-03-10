@@ -1,0 +1,31 @@
+#include<iostream>
+#include<algorithm>
+using namespace std ;
+int main() {
+	int n ;
+	cin >> n ;
+	int wt[n], val[n], capi, ans=0;
+	cin >> capi ;
+	pair<int,int> p[n];
+	for(int i = 0 ; i < n ; ++ i )
+		cin >> wt[i];
+	for(int i = 0 ; i < n ; ++ i ){
+		cin >> val[i];
+		p[i].first=val[i]/wt[i];
+		p[i].second=i;
+	}
+	sort(p,p+n);
+	for(int i =  n-1 ; i >=0 && capi>0 ; -- i ) {
+		if(capi>=wt[p[i].second]){
+			ans+=val[p[i].second];
+			capi-=wt[p[i].second];
+		}
+		else{
+			ans+=p[i].first*capi;
+			capi=0;
+		}
+	}
+	cout << ans << endl;
+
+	
+}
