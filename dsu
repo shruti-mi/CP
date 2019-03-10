@@ -1,0 +1,48 @@
+#include <iostream>
+#define ll long long int 
+using namespace std;
+
+int find_set(int x,int p[]){
+if(x!=p[x])
+	p[x]=find_set(p[x],p);
+return p[x];
+}
+
+void merge_set(int a, int b, int p[],int rank[]){
+
+int pa=find_set(a,p);
+int pb=find_set(b,p);
+
+if(rank[pa]<rank[pb]){
+	p[pa]=pb;
+	rank[pb]+=rank[pa];
+	rank[pa]=0;
+}
+else{
+	p[pb]=pa;
+	rank[pa]+=rank[pb];
+	rank[pb]=0;
+}
+
+}
+
+
+int main() {
+int n , m ;
+
+cin >> n ; // n - nodes
+int p[n+1],rank[n+1] , a, b;
+
+for(int i = 1 ; i <=n ; ++ i )
+p[i]=i,rank[i]=1;
+
+cin >> m ;
+
+for(int i =  0 ; i < m ; ++ i ) {
+cin >> a >> b ;
+merge_set(a,b,p,rank);
+}
+for(int i = 1 ; i <=n ; ++ i )
+cout << p[i] << endl;
+
+}
