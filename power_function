@@ -1,0 +1,11 @@
+    
+ll power(ll a  , ll b , ll m ) {
+   if(b==0)
+   return 1;
+   if(b&1)
+   return (a*power(a,b/2,m)%m*power(a,b/2,m)%m)%m;
+   else
+   return (power(a,b/2,m)%m*power(a,b/2,m)%m)%m;
+}
+// (a^b)%m
+
