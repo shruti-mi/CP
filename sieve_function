@@ -1,0 +1,14 @@
+void sieve( int n ) {
+string str(n,'1') ;
+str[0] = '0' ;
+str[1] = '0' ;
+for(int i = 2 ; i*i <= n ; ++ i ) {
+  if(str[i]=='1') {
+    cout << i << " ";
+      for(int j = 2*i ; j <= n ; j+=i )
+        str[j] = '0' ;
+  }
+}  
+cout << "\n" ;
+}
+// print all prime number till n
