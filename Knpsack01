@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std ;
+int main() {
+  int t ;
+  cin >> t ;
+  while(t--) {
+    int n , w ;
+    cin >> n >> w ;
+    int wt[n],v[n];
+    for(int i = 1 ; i <= n ; ++ i ) {
+      cin >> wt[i] ;
+    }
+    for(int i =1 ; i <= n ; ++ i )
+    cin >> v[i] ;
+
+    int k[n+1][w+1] ;
+
+    for(int i = 0 ; i <= n ;++ i ) {
+      for(int j = 0 ; j <= w ;  j ) {
+        if(j==0 || i==0 ) // If we have Knapsack space 0 or no item left we can't have any knapsack weight available
+        k[i][j]=0;
+        else if (wt[i]<=w) // Here we have choice to include the current element or not
+        k[i][j] = max(v[i]+k[i-1][w-wt[i]],k[i-1][w]);
+        else // Here we are bound to exclude the current weight
+        k[i][j] = k[i-1][w] ;
+      }
+    }
+    //We can even print which inlcuded we include in Knapsack
+    for(int i = n ; i!=0 ; -- i ) {
+      if(k[i][w]==k[i-1][w])
+    }
+
+  }
+}
