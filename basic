@@ -1,31 +1,33 @@
-#include<bits/stdc++.h>
-
+#include <bits/stdc++.h>
 using namespace std;
 
-#define f first
-#define s second
+#define tt typedef  
+tt long long int ll;
+
+#define PI 3.141592653589793
+#define MOD  (ll)(1e9+7)
+#define INF (int)1e9
 #define pb push_back
-#define ll long long 
 #define mp make_pair
-#define all(x) x.begin(),x.end()
-#define rall(x) x.rbegin(),x.rend()
+#define first f
+#define second s
 
-#define sync ios_base::sync_with_stdio(false),cin.tie(nullptr);
+#define all(x) x.begin(),x.end()  
+#define rall(x) x.rbegin(),x.rbegin()
+#define rep(i,a,b) for(int i=a;i<=b;i++)
+#define mem(a,x) memset(a,x,sizeof(a))
+#define fordn(i,n) for(int i = n-1 ; i>= 0 ;--i)
+#define forup(i,n) for(int i = 0 ; i < n ; ++ i )
 
-#define foru(i,n) for(int i = 0 ; i < n ; ++ i )
-#define ford(i,n) for(int i = n-1 ; i >= 0 ; -- i )
-#define rep(i,a,b) for(int i = a ; i <= b ; ++ i )
-#define PI 3.14159265
-#define M 1000000007
-#define MX INT_MAX
-#define MN INT_MIN
+#define fast ios_base::sync_with_stdio(false)
 
-typedef pair<ll, ll> pii;
-typedef vector<ll> vi;
-typedef vector<pii> vpi;
-typedef vector<vi> vvi;
 
+tt map<int ,int > mii;
+tt pair<ll, ll> pll;
+tt pair<int,int> pii;
+tt vector<int> vii;
+tt vector<ll> vll;
+ 
 int main() {
-  sync ;
-
+	
 }
